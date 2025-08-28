@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+
+@layer base{
+  body{
+    @apply w-full h-full min-w-[#375px] bg-[#0F172B]
+  }
+}
