@@ -13,7 +13,11 @@ const app = express();
 const MONGODB_URI = process.env.MONGODB_URI || "";
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(
+	cors({
+		origin: ["http://localhost:5173", "https://pricecard-self.vercel.app"],
+	})
+);
 app.use(express.json());
 
 app.use("/api/prices", priceRoutes);
